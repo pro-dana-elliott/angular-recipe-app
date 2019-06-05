@@ -1,0 +1,9 @@
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched{
+  border: 1px solid red;
+}
+
+.recipe-edit-comp-margins {
+    margin-top: 5px;
+    /*border: crimson solid 5px;*/
+}

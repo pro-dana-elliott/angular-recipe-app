@@ -1,0 +1,41 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light app-nav-bar">
+  <a class="navbar-brand nav-color" routerLink="/" style="cursor: pointer;">Recipe Book</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"  routerLinkActive="active"><a  class="nav-link nav-color" routerLink="/recipes">Recipes</a></li>
+          <li class="nav-item" routerLinkActive="active"><a class="nav-link nav-color" routerLink="/shopping-list">Shopping&nbsp;List</a></li>
+        </ul>
+        <ul class="navbar-nav navbar-right">
+          <ng-template [ngIf]="!isAuthenticated()">
+            <li class="nav-item"><a class="nav-link nav-color" routerLink="/signup">Register</a></li>
+            <li class="nav-item"><a class="nav-link nav-color" routerLink="/signin">Login</a></li>
+          </ng-template>
+          <li  class="nav-item"><a class="nav-link nav-color" style="cursor: pointer;" (click)="onLogut()" *ngIf="isAuthenticated()">Logout</a></li>
+          <li class="nav-item dropdown" *ngIf="isAuthenticated()">
+            <a class="nav-link dropdown-toggle nav-color" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"  style="cursor: pointer"
+               aria-haspopup="true" aria-expanded="false">
+              Manage Data
+            </a>
+            <div class="dropdown-menu" style="cursor: pointer" aria-labelledby="navbarDropdownMenuLink">
+                <a class="nav-link dropdown-item nav-color" (click)="onSaveData()">Save Data</a>
+                <a class="nav-link dropdown-item nav-color" (click)="onFetchData()">Fetch Data</a>
+            </div>
+          </li>
+        </ul>
+  </div>
+</nav>
+
+          <!--<li class="dropdown" appDropdown *ngIf="isAuthenticated()">-->
+            <!--<a  class="draopdown-toggle" style="cursor: pointer">Manage Data<span class="caret"></span></a>-->
+            <!--<ul class="dropdown-menu">-->
+              <!--<li><a style="cursor: pointer" (click)="onSaveData()">Save Data</a></li>-->
+              <!--<li><a style="cursor: pointer" (click)="onFetchData()">Fetch Data</a></li>-->
+            <!--</ul>-->
+          <!--</li>-->
+
+
