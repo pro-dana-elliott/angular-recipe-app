@@ -11,7 +11,7 @@ import {Subscription} from 'rxjs';
 })
 export class ShoppingListEditComponent implements OnInit, OnDestroy {
   // @Input() ingredients: Ingredient[];
-  @ViewChild('f') slForm: NgForm;
+  @ViewChild('f', { static: true }) slForm: NgForm;
   subscription: Subscription;
   editMode = false;
   editItemIndex: number;

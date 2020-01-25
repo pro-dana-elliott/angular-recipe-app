@@ -8,7 +8,7 @@ import {SigninComponent} from './auth/signin/signin.component';
 const appRoutes: Routes = [
   // {path: '', redirectTo: '/recipes', pathMatch: 'full' },
   {path: '', component: HomeComponent },
-  {path: 'recipes', loadChildren: './recipes/recipes.module#RecipesModule' },
+  {path: 'recipes', loadChildren: () => import('./recipes/recipes.module').then(m => m.RecipesModule) },
   {path: 'shopping-list', component: ShoppingListComponent},
   {path: 'signup', component: SignupComponent},
   {path: 'signin', component: SigninComponent},
