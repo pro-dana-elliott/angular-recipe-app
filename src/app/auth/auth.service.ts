@@ -1,5 +1,5 @@
-import * as firebase from 'firebase/app';
-import 'firebase/auth';
+//import * as firebase from 'firebase/app';
+//import 'firebase/auth';
 import {Router} from '@angular/router';
 import { Injectable} from '@angular/core';
 import {AuthModel} from './auth.model';
@@ -12,7 +12,7 @@ export class AuthService {
   signinUserEvent = new Subject<AuthModel>();
 
   constructor(private router: Router) {}
-
+/*
   signupUser(email: string, password: string)  {
     return new Promise( (resolve) => {
     firebase.auth().createUserWithEmailAndPassword(email, password)
@@ -67,5 +67,5 @@ export class AuthService {
     this.token = null;
     this.router.navigate(['/']);
   }
-
+*/
 }

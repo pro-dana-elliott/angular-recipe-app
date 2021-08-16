@@ -1,5 +1,6 @@
+
 import {Component} from '@angular/core';
-import {DataStorageService} from '../../shared/data-storage.service';
+//import {DataStorageService} from '../../shared/data-storage.service';
 import {AuthService} from '../../auth/auth.service';
 import {HttpEvent} from '@angular/common/http';
 
@@ -9,7 +10,7 @@ import {HttpEvent} from '@angular/common/http';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-
+/*
   constructor(private dataStorageService: DataStorageService, private authService: AuthService) {}
 
  // original
@@ -39,5 +40,6 @@ export class HeaderComponent {
   isAuthenticated() {
     return this.authService.isAuthenticated();
   }
+  */
 
 }
